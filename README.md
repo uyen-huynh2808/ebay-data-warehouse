@@ -43,7 +43,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
          | Looker Studio    |
          +------------------+
 ```
-(add diagram)
+(ADD DIAGRAM)
 
 ## Technology Stack
 | Component        | Technology Used |
@@ -95,7 +95,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
    - month
    - year
 
-(add diagram)
+(ADD DIAGRAM)
 
 ## Setup Instructions
 1. **Set up Google Cloud Platform (GCP)** and enable **BigQuery**.
