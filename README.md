@@ -43,6 +43,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
          | Looker Studio    |
          +------------------+
 ```
+(add diagram)
 
 ## Technology Stack
 | Component        | Technology Used |
@@ -94,6 +95,8 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
    - month
    - year
 
+(add diagram)
+
 ## Setup Instructions
 1. **Set up Google Cloud Platform (GCP)** and enable **BigQuery**.
 2. **Obtain eBay API Credentials** from [eBay Developer Portal](https://developer.ebay.com/).
@@ -110,6 +113,16 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 ## Future Enhancements
 - Expand to **AWS Redshift & Snowflake** for multi-cloud compatibility.
 - Implement **real-time data streaming** using Kafka or Pub/Sub.
+
+## Scripts for project
+1. scraper.py – Scrape product data from eBay.
+2. data_cleaning.py – Clean and transform scraped data.
+3. load_to_gcs.py – Upload raw data to Google Cloud Storage.
+4. etl_pipeline.py – Extract, transform, and load data using Mage.
+5. dbt_models/ (Folder) – dbt SQL models for data transformations.
+6. bigquery_schema.sql – Define BigQuery table schema.
+7. dashboard_setup.lookml – Configure Looker dashboard.
+8. airflow_dag.py – Airflow DAG to automate the pipeline.
 
 ---
 This EDW solution enables scalable and insightful e-commerce sales analytics using cloud-native technologies.
