@@ -5,7 +5,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 
 ## Architecture
 ### **1. Data Ingestion**
-- Extract product sales data from **eBay API**.
+- Extract laptop sales data from **eBay API**.
 - Store raw data in **Google Cloud Storage (GCS)**.
 
 ### **2. Data Processing & Transformation**
@@ -16,7 +16,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 - Automate workflows using **Apache Airflow**.
 
 ### **4. Business Intelligence (BI)**
-- Build dashboards using **Looker Studio** to visualize sales performance.
+- Build dashboards using **Looker Studio** to visualize laptop sales performance.
 
 ```
          +------------------+
@@ -56,37 +56,45 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 | BI & Reporting  | **Looker Studio** |
 
 ## Dataset Used
-- Data is collected from **eBay API**, which provides information on:
-  - Product name
-  - Category
+- Data is collected from **eBay API**, specifically focusing on laptop sales, which includes:
+  - Laptop brand (Dell, HP, Apple, etc.)
+  - Model name and specifications (RAM, CPU, Storage, etc.)
   - Seller details
   - Price & currency
   - Listing status (Active/Sold)
   - Customer ratings & reviews
+  - Item condition (New/Used)
+  - Shipping details (Shipping cost, delivery time)
   
 ## Data Model
 ### **Fact Tables**
-1. **fact_sales** (Stores transaction-level details)
+1. **fact_laptop_sales** (Stores transaction-level details)
    - sale_id (PK)
-   - product_id (FK)
+   - laptop_id (FK)
    - seller_id (FK)
    - sale_price
    - quantity_sold
    - sale_date
 
 ### **Dimension Tables**
-2. **dim_products** (Stores product details)
-   - product_id (PK)
-   - product_name
-   - category
+2. **dim_laptops** (Stores laptop details)
+   - laptop_id (PK)
    - brand
+   - model_name
+   - processor
+   - ram_size
+   - storage_capacity
+   - gpu
+   - screen_size
    - listing_price
+   - item_condition
 
 3. **dim_sellers** (Stores seller details)
    - seller_id (PK)
    - seller_name
    - seller_location
    - rating
+   - seller_feedback_score
 
 4. **dim_dates** (Stores date attributes for analysis)
    - date_id (PK)
@@ -105,7 +113,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
    pip install apache-airflow dbt-bigquery google-cloud-storage requests pandas
    ```
 4. **Run the pipeline:**
-   - **Extract Data:** Use Python to pull data from eBay API.
+   - **Extract Data:** Use Python to pull laptop sales data from eBay API.
    - **Load Data:** Store raw JSON in Google Cloud Storage (GCS).
    - **Transform Data:** Use dbt to clean and structure the data.
    - **Visualize:** Create dashboards in Looker Studio.
@@ -113,9 +121,12 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 ## Future Enhancements
 - Expand to **AWS Redshift & Snowflake** for multi-cloud compatibility.
 - Implement **real-time data streaming** using Kafka or Pub/Sub.
+- Improve **pricing trend analysis** for laptops.
+- Enhance product insights using **sentiment analysis on customer reviews**.
+- Automate **data quality checks** using Great Expectations.
 
 ## Scripts for project
-1. scraper.py – Scrape product data from eBay.
+1. scraper.py – Scrape laptop sales data from eBay.
 2. data_cleaning.py – Clean and transform scraped data.
 3. load_to_gcs.py – Upload raw data to Google Cloud Storage.
 4. etl_pipeline.py – Extract, transform, and load data using Mage.
@@ -125,4 +136,4 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 8. airflow_dag.py – Airflow DAG to automate the pipeline.
 
 ---
-This EDW solution enables scalable and insightful e-commerce sales analytics using cloud-native technologies.
+This EDW solution enables scalable and insightful **laptop sales analytics** using cloud-native technologies.
