@@ -89,7 +89,7 @@ Stores seller-related information.
 1. `scraper.py` – Scrape laptop sales data from eBay.
 2. `load_to_gcs.py` – Upload raw data to Google Cloud Storage. 
 3. `bigquery_schema.sql` – Define BigQuery table schema. 
-4. `etl_pipeline.py` – Extracts data from Google Cloud Storage, transforms it by cleaning (removing duplicates & nulls), and loads it into BigQuery.
+4. `etl_pipeline.py` – Extracts data from Google Cloud Storage, transforms it by cleaning, and loads it into BigQuery.
 5. `dbt_models/` – dbt SQL models for data transformations. 
 6. `airflow_dag.py` – Airflow DAG to automate the pipeline.
 7. `dashboard_setup.lookml` – Configure Looker dashboard.
