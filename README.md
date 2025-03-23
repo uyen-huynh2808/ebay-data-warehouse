@@ -43,7 +43,8 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
          | Looker Studio    |
          +------------------+
 ```
-(ADD DIAGRAM)
+
+(**ADD DIAGRAM**)
 
 ## Technology Stack
 | Component        | Technology Used |
@@ -84,6 +85,8 @@ Stores essential details about laptop models.
 Stores seller-related information.
 - `seller_id` (PK) – Unique identifier for the seller.
 - `seller_feedback_score` – Seller's feedback score from customers.
+
+(**ADD DIAGRAM**)
 
 ## Setup Instructions
 1. **Set up Google Cloud Platform (GCP)** and enable **BigQuery**.
