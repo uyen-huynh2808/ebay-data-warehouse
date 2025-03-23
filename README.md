@@ -19,7 +19,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 - Build dashboards using **Looker Studio** to visualize laptop sales performance.
 
 ```
-    ![architecture](https://github.com/user-attachments/assets/cad0fd0e-f014-41e2-969e-67be50d4931a)
+    ![architecture](https://private-user-images.githubusercontent.com/201462828/425805884-cad0fd0e-f014-41e2-969e-67be50d4931a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI3MTYwMjYsIm5iZiI6MTc0MjcxNTcyNiwicGF0aCI6Ii8yMDE0NjI4MjgvNDI1ODA1ODg0LWNhZDBmZDBlLWYwMTQtNDFlMi05NjllLTY3YmU1MGQ0OTMxYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyM1QwNzQyMDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00YjZjMTJhYTZjOWYwYjg1MTRiM2Q5ODgyM2ZkOGUxNmNlZDU2MDY0MWNlZjU0Nzk1YmFiNzAzNjliNTc4MzE4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.GmMZlE2IrViySmX7GtrWDgjdUKt4TTAtO49LEaVKYvY)
 
 ```
 
