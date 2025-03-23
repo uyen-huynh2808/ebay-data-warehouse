@@ -47,6 +47,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 Stores transaction-level details of laptop sales.
 - `sale_id` (PK) – Unique identifier for the sale (from eBay).
 - `seller_id` (FK) – Reference to the seller.
+- `model_name` (FK) – Reference to the laptop model.
 - `sale_price` – Final sale price of the laptop.
 - `currency` – Currency of the sale.
 - `listing_price` – Original listing price before sale.
