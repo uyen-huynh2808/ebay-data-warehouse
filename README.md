@@ -19,29 +19,8 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 - Build dashboards using **Looker Studio** to visualize laptop sales performance.
 
 ```
-         +------------------+
-         |  eBay API        |
-         +--------+---------+
-                  |
-                  v
-         +------------------+
-         |  Google Cloud Storage |
-         +--------+---------+
-                  |
-                  v
-         +------------------+
-         | Google BigQuery  |
-         +--------+---------+
-                  |
-                  v
-         +------------------+
-         | dbt Transformation |
-         +--------+---------+
-                  |
-                  v
-         +------------------+
-         | Looker Studio    |
-         +------------------+
+    ![architecture](https://github.com/user-attachments/assets/c6df7337-8a3d-4e27-9d2c-62a5454feb8f)
+
 ```
 
 (================**ADD DIAGRAM**==================)
