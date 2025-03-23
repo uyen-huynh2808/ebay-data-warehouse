@@ -19,7 +19,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 - Build dashboards using **Looker Studio** to visualize laptop sales performance.
 
 ```
-    ![architecture](https://github.com/user-attachments/assets/c6df7337-8a3d-4e27-9d2c-62a5454feb8f)
+    ![architecture](https://github.com/uyen-huynh2808/ebay-data-warehouse/blob/main/architecture.png)
 
 ```
 
