@@ -89,11 +89,10 @@ Stores seller-related information.
 1. `scraper.py` – Scrape laptop sales data from eBay.
 2. `load_to_gcs.py` – Upload raw data to Google Cloud Storage. 
 3. `bigquery_schema.sql` – Define BigQuery table schema. 
-4. `data_cleaning.py` – Clean and transform scraped data. 
-5. `etl_pipeline.py` – Extract, transform, and load data using Mage. 
-6. `dbt_models/` – dbt SQL models for data transformations. 
-7. `airflow_dag.py` – Airflow DAG to automate the pipeline.
-8. `dashboard_setup.lookml` – Configure Looker dashboard.
+4. `etl_pipeline.py` – Extract, transform, and load data using Mage. 
+5. `dbt_models/` – dbt SQL models for data transformations. 
+6. `airflow_dag.py` – Airflow DAG to automate the pipeline.
+7. `dashboard_setup.lookml` – Configure Looker dashboard.
 
 ---
 This EDW solution enables scalable and insightful **laptop sales analytics** using cloud-native technologies.
