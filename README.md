@@ -57,53 +57,33 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 
 ## Dataset Used
 - Data is collected from **eBay API**, specifically focusing on laptop sales, which includes:
-  - Laptop brand (Dell, HP, Apple, etc.)
-  - Model name and specifications (RAM, CPU, Storage, etc.)
-  - Seller details
-  - Price & currency
-  - Listing status (Active/Sold)
-  - Customer ratings & reviews
-  - Item condition (New/Used)
-  - Shipping details (Shipping cost, delivery time)
-  
+  - Sale ID (Unique transaction identifier)
+  - Seller ID & feedback score
+  - Model name & specifications
+  - Item condition (New/Refurbished)
+  - Sale price & currency
+  - Listing price (Before sale)
+
 ## Data Model
-### **Fact Tables**
-1. **fact_laptop_sales** (Stores transaction-level details)
-   - sale_id (PK)
-   - laptop_id (FK)
-   - seller_id (FK)
-   - sale_price
-   - quantity_sold
-   - sale_date
+### **Fact Table**
+##### `fact_laptop_sales`
+Stores transaction-level details of laptop sales.
+- `sale_id` (PK) – Unique identifier for the sale (from eBay).
+- `seller_id` (FK) – Reference to the seller.
+- `sale_price` – Final sale price of the laptop.
+- `currency` – Currency of the sale.
+- `listing_price` – Original listing price before sale.
+- `item_condition` – Condition of the laptop (e.g., New, Refurbished).
 
 ### **Dimension Tables**
-2. **dim_laptops** (Stores laptop details)
-   - laptop_id (PK)
-   - brand
-   - model_name
-   - processor
-   - ram_size
-   - storage_capacity
-   - gpu
-   - screen_size
-   - listing_price
-   - item_condition
+##### `dim_laptops`
+Stores essential details about laptop models.
+- `model_name` (PK) – Full model name with specifications.
 
-3. **dim_sellers** (Stores seller details)
-   - seller_id (PK)
-   - seller_name
-   - seller_location
-   - rating
-   - seller_feedback_score
-
-4. **dim_dates** (Stores date attributes for analysis)
-   - date_id (PK)
-   - full_date
-   - day
-   - month
-   - year
-
-(ADD DIAGRAM)
+##### `dim_sellers`
+Stores seller-related information.
+- `seller_id` (PK) – Unique identifier for the seller.
+- `seller_feedback_score` – Seller's feedback score from customers.
 
 ## Setup Instructions
 1. **Set up Google Cloud Platform (GCP)** and enable **BigQuery**.
@@ -126,14 +106,14 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 - Automate **data quality checks** using Great Expectations.
 
 ## Scripts for project
-1. scraper.py – Scrape laptop sales data from eBay.
-2. data_cleaning.py – Clean and transform scraped data.
-3. load_to_gcs.py – Upload raw data to Google Cloud Storage.
-4. etl_pipeline.py – Extract, transform, and load data using Mage.
-5. dbt_models/ (Folder) – dbt SQL models for data transformations.
-6. bigquery_schema.sql – Define BigQuery table schema.
-7. dashboard_setup.lookml – Configure Looker dashboard.
-8. airflow_dag.py – Airflow DAG to automate the pipeline.
+1. `scraper.py` – Scrape laptop sales data from eBay.
+2. `data_cleaning.py` – Clean and transform scraped data.
+3. `load_to_gcs.py` – Upload raw data to Google Cloud Storage.
+4. `etl_pipeline.py` – Extract, transform, and load data using Mage.
+5. `dbt_models/` – dbt SQL models for data transformations.
+6. `bigquery_schema.sql` – Define BigQuery table schema.
+7. `dashboard_setup.lookml` – Configure Looker dashboard.
+8. `airflow_dag.py` – Airflow DAG to automate the pipeline.
 
 ---
 This EDW solution enables scalable and insightful **laptop sales analytics** using cloud-native technologies.
