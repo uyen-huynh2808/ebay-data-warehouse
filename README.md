@@ -23,8 +23,6 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 
 ```
 
-(================**ADD DIAGRAM**==================)
-
 ## Technology Stack
 | Component        | Technology Used |
 |-----------------|----------------|
