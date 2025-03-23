@@ -63,7 +63,7 @@ Stores seller-related information.
 - `seller_id` (PK) – Unique identifier for the seller.
 - `seller_feedback_score` – Seller's feedback score from customers.
 
-(=================**ADD DIAGRAM**=================)
+    ![dbdiagram](https://github.com/user-attachments/assets/f4c0d575-7586-42da-ad2a-1347c21e2695)
 
 ## Setup Instructions
 1. **Set up Google Cloud Platform (GCP)** and enable **BigQuery**.
