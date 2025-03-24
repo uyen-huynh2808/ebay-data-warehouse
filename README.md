@@ -65,25 +65,6 @@ Stores seller-related information.
 
     ![dbdiagram](https://github.com/user-attachments/assets/f4c0d575-7586-42da-ad2a-1347c21e2695)
 
-## Setup Instructions
-1. **Set up Google Cloud Platform (GCP)** and enable **BigQuery**.
-2. **Obtain eBay API Credentials** from [eBay Developer Portal](https://developer.ebay.com/).
-3. **Install required tools:**
-   ```sh
-   pip install apache-airflow dbt-bigquery google-cloud-storage requests pandas
-   ```
-4. **Run the pipeline:**
-   - **Extract Data:** Use Python to pull laptop sales data from eBay API.
-   - **Load Data:** Store raw JSON in Google Cloud Storage (GCS).
-   - **Transform Data:** Use dbt to clean and structure the data.
-   - **Visualize:** Create dashboards in Looker Studio.
-
-## Future Enhancements
-- Expand to **AWS Redshift & Snowflake** for multi-cloud compatibility.
-- Implement **real-time data streaming** using Kafka or Pub/Sub.
-- Improve **pricing trend analysis** for laptops.
-- Enhance product insights using **sentiment analysis on customer reviews**.
-- Automate **data quality checks** using Great Expectations.
 
 ## Scripts for project
 1. `scraper.py` – Scrape laptop sales data from eBay.
