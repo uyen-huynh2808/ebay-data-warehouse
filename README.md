@@ -65,7 +65,6 @@ Stores seller-related information.
 
     ![dbdiagram](https://github.com/user-attachments/assets/f4c0d575-7586-42da-ad2a-1347c21e2695)
 
-
 ## Scripts for project
 1. `scraper.py` – Scrape laptop sales data from eBay.
 2. `load_to_gcs.py` – Upload raw data to Google Cloud Storage. 
