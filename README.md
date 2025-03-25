@@ -1,25 +1,30 @@
-# E-Commerce Sales Analytics Data Warehouse (eBay - BigQuery - Looker)
+# E-Commerce Laptop Listings Analytics Data Warehouse (eBay - BigQuery - Looker)
 
 ## Introduction
-This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales Analytics**, leveraging cloud data warehousing, ETL, and BI tools to analyze sales performance, customer behavior, and product trends. The data is sourced from eBay using the **eBay API**, transformed using **dbt**, orchestrated with **Apache Airflow**, and visualized in **Looker Studio**. The solution is built on **Google BigQuery** but designed to be expandable to **AWS Redshift and Snowflake**.
+This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop Listings Analytics**, leveraging cloud data warehousing, ETL, and BI tools to analyze **seller performance, competition, and price trends**. The data is sourced from **eBay API**, transformed using **dbt**, and visualized in **Looker Studio**. The solution is built on **Google BigQuery** but designed to be expandable to **AWS Redshift and Snowflake**.
+
+## Project Goals
+1. **Seller Performance & Competition**
+   - Identify top-performing laptop sellers based on listing metrics.
+   - Compare sellers based on listing volume, pricing, and feedback score.
+   
+2. **Price Trends & Competitor Pricing**
+   - Track price variations for laptop models across different sellers.
+   - Analyze pricing strategies by condition (New, Used, Refurbished).
+   - Monitor trends for popular laptop brands and specifications.
 
 ## Architecture
 ### **1. Data Ingestion**
-- Extract laptop sales data from **eBay API**.
-- Store raw data in **Google Cloud Storage (GCS)**.
+- Extract **laptop listings data** from **eBay API**.
+- Store raw JSON data in **Google Cloud Storage (GCS)**.
 
 ### **2. Data Processing & Transformation**
-- Load raw data from GCS to **Google BigQuery**.
-- Transform data using **dbt (Data Build Tool)**.
+- Load raw data from GCS into **Google BigQuery**.
+- Transform and structure data using **dbt (Data Build Tool)**.
 
-### **3. Orchestration & Scheduling**
-- Automate workflows using **Apache Airflow**.
+### **3. Business Intelligence (BI)**
+- Build dashboards in **Looker Studio** to track seller performance and pricing trends.
 
-### **4. Business Intelligence (BI)**
-- Build dashboards using **Looker Studio** to visualize laptop sales performance.
-
-
-    ![architecture](https://private-user-images.githubusercontent.com/201462828/425805884-cad0fd0e-f014-41e2-969e-67be50d4931a.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDI3MTYwMjYsIm5iZiI6MTc0MjcxNTcyNiwicGF0aCI6Ii8yMDE0NjI4MjgvNDI1ODA1ODg0LWNhZDBmZDBlLWYwMTQtNDFlMi05NjllLTY3YmU1MGQ0OTMxYS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMyM1QwNzQyMDZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00YjZjMTJhYTZjOWYwYjg1MTRiM2Q5ODgyM2ZkOGUxNmNlZDU2MDY0MWNlZjU0Nzk1YmFiNzAzNjliNTc4MzE4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.GmMZlE2IrViySmX7GtrWDgjdUKt4TTAtO49LEaVKYvY)
 
 
 ## Technology Stack
@@ -29,50 +34,55 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Sales An
 | Data Storage    | **Google Cloud Storage (GCS)** |
 | Data Warehouse  | **Google BigQuery** |
 | ETL Processing  | **dbt (CLI version)** |
-| Orchestration   | **Apache Airflow** |
 | BI & Reporting  | **Looker Studio** |
 
 ## Dataset Used
-- Data is collected from **eBay API**, specifically focusing on laptop sales, which includes:
-  - Sale ID (Unique transaction identifier)
-  - Seller ID & feedback score
-  - Model name & specifications
-  - Item condition (New/Refurbished)
-  - Sale price & currency
-  - Listing price (Before sale)
+Data is collected from **eBay API**, specifically focusing on **laptop listings**, which includes:
+  - Laptop brand, and specifications (RAM, Storage, etc.)
+  - Seller details (Username, feedback score)
+  - Listing price & currency
+  - Item condition (New, Used, Refurbished)
+  - Shipping cost
 
 ## Data Model
 ### **Fact Table**
-##### `fact_laptop_sales`
-Stores transaction-level details of laptop sales.
-- `sale_id` (PK) – Unique identifier for the sale (from eBay).
-- `seller_id` (FK) – Reference to the seller.
-- `model_name` (FK) – Reference to the laptop model.
-- `sale_price` – Final sale price of the laptop.
-- `currency` – Currency of the sale.
-- `listing_price` – Original listing price before sale.
-- `item_condition` – Condition of the laptop (e.g., New, Refurbished).
+1. **fact_laptop_listings** (Stores listing-level details)
+   - listing_id (PK)
+   - seller_id (FK)
+   - condition_id (FK)
+   - listing_price
+   - currency
+   - shipping_cost
 
 ### **Dimension Tables**
-##### `dim_laptops`
-Stores essential details about laptop models.
-- `model_name` (PK) – Full model name with specifications.
+2. **dim_laptops** (Stores laptop details)
+   - laptop_id (PK)
+   - brand
+   - ram_size
+   - storage_type
+   - storage_capacity
 
-##### `dim_sellers`
-Stores seller-related information.
-- `seller_id` (PK) – Unique identifier for the seller.
-- `seller_feedback_score` – Seller's feedback score from customers.
+3. **dim_sellers** (Stores seller details)
+   - seller_id (PK)
+   - seller_feedback_score
+   
+4. **dim_conditions** (Stores item condition details)
+   - condition_id (PK)
+   - condition_name (New, Used, Refurbished, ...)
 
-    ![dbdiagram](https://github.com/user-attachments/assets/f4c0d575-7586-42da-ad2a-1347c21e2695)
+## Future Enhancements
+- Expand to **AWS Redshift & Snowflake** for multi-cloud compatibility.
+- Enhance **competitor pricing analysis** using ML models.
+- Implement **real-time listing monitoring** with streaming data pipelines.
+- Include **customer sentiment analysis** from product reviews.
 
-## Scripts for project
-1. `scraper.py` – Scrape laptop sales data from eBay.
-2. `load_to_gcs.py` – Upload raw data to Google Cloud Storage. 
-3. `bigquery_schema.sql` – Define BigQuery table schema. 
-4. `etl_pipeline.py` – Extracts data from Google Cloud Storage, transforms it by cleaning, and loads it into BigQuery.
-5. `dbt_models/` – dbt SQL models for data transformations. 
-6. `airflow_dag.py` – Airflow DAG to automate the pipeline.
-7. `dashboard_setup.lookml` – Configure Looker dashboard.
+## Project Files
+1. `scraper.py` – Scrape laptop listings from eBay.
+2. `load_to_gcs.py` – Upload raw data to Google Cloud Storage.
+3. `etl_pipeline.py` – Extract, transform, and load data using dbt.
+4. `dbt_models/` – dbt SQL models for data transformations.
+5. `bigquery_schema.sql` – Define BigQuery table schema.
+6. `dashboard_setup.lookml` – Configure Looker dashboard.
+7. `airflow_dag.py` (Optional) – Airflow DAG for automation.
 
 ---
-This EDW solution enables scalable and insightful **laptop sales analytics** using cloud-native technologies.
