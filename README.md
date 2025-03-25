@@ -25,7 +25,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop L
 ### **3. Business Intelligence (BI)**
 - Build dashboards in **Looker Studio** to track seller performance and pricing trends.
 
-
+![architecture](https://github.com/user-attachments/assets/97f4f182-6190-4fa4-a417-1c697f8a47ad)
 
 ## Technology Stack
 | Component        | Technology Used |
