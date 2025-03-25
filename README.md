@@ -81,10 +81,9 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 ## Project Files
 1. `scraper.py` – Scrape laptop listings from eBay.
 2. `load_to_gcs.py` – Upload raw data to Google Cloud Storage.
-3. `etl_pipeline.py` – Extract, transform, and load data using dbt.
-4. `dbt_models/` – dbt SQL models for data transformations.
-5. `bigquery_schema.sql` – Define BigQuery table schema.
+3. `bigquery_schema.sql` – Define BigQuery table schema.
+4. `etl_pipeline.py` – Extracts data from Google Cloud Storage, transforms and loads it into BigQuery.
+5. `dbt_models/` – dbt SQL models for data transformations.
 6. `dashboard_setup.lookml` – Configure Looker dashboard.
-7. `airflow_dag.py` (Optional) – Airflow DAG for automation.
 
 ---
