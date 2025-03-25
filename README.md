@@ -47,8 +47,7 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 ## Data Model
 ### **Fact Table**
 1. **fact_laptop_listings** (Stores listing-level details)
-   - listing_id (PK)
-   - laptop_id (FK)
+   - listing_id (PK) (FK)
    - seller_id (FK)
    - condition_id (FK)
    - listing_price
