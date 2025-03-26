@@ -19,7 +19,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop L
 - Store raw JSON data in **Google Cloud Storage (GCS)**.
 
 ### **2. Data Processing & Transformation**
-- Load raw data from GCS into **Google BigQuery**.
+- Load data from GCS into **Google BigQuery**.
 - Transform and structure data using **dbt (Data Build Tool)**.
 
 ### **3. Business Intelligence (BI)**
