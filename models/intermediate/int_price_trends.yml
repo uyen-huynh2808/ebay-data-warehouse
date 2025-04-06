@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_price_trends
+    description: "Intermediate model that calculates price variation for laptops by seller."
+    columns:
+      - name: Brand
+        description: "Brand of the laptop."
+        tests:
+          - not_null
+      - name: Seller_ID
+        description: "Unique identifier for the seller."
+        tests:
+          - not_null
+      - name: Avg_Price
+        description: "Average price for the laptop model from the seller."
+        tests:
+          - not_null
+      - name: Min_Price
+        description: "Minimum price for the laptop model from the seller."
+        tests:
+          - not_null
+      - name: Max_Price
+        description: "Maximum price for the laptop model from the seller."
+        tests:
+          - not_null
+      - name: Total_Listings
+        description: "Total number of listings by the seller for the laptop model."
+        tests:
+          - not_null
