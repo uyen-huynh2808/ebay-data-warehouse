@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: int_seller_performance
+    description: "Intermediate model that calculates seller performance metrics."
+    columns:
+      - name: Seller_ID
+        description: "Unique identifier for the seller."
+        tests:
+          - not_null
+      - name: Total_Listings
+        description: "Total number of listings by the seller."
+        tests:
+          - not_null
+      - name: Avg_Price
+        description: "Average price for the seller's listings."
+        tests:
+          - not_null
+      - name: Feedback_Score
+        description: "Average feedback score for the seller."
+        tests:
+          - not_null
