@@ -1,0 +1,34 @@
+[
+    {
+        "ConditionID": "2030",
+        "ConditionName": "Good - Refurbished"
+    },
+    {
+        "ConditionID": "3000",
+        "ConditionName": "Used"
+    },
+    {
+        "ConditionID": "1000",
+        "ConditionName": "New"
+    },
+    {
+        "ConditionID": "2020",
+        "ConditionName": "Very Good - Refurbished"
+    },
+    {
+        "ConditionID": "2010",
+        "ConditionName": "Excellent - Refurbished"
+    },
+    {
+        "ConditionID": "2000",
+        "ConditionName": "Certified - Refurbished"
+    },
+    {
+        "ConditionID": "1500",
+        "ConditionName": "Open box"
+    },
+    {
+        "ConditionID": "7000",
+        "ConditionName": "For parts or not working"
+    }
+]
