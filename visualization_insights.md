@@ -24,8 +24,8 @@ This document summarizes the visual insights obtained from three analytical data
 ![Average-Price-by-Seller-Tier](https://private-user-images.githubusercontent.com/201462828/430766416-bf1d7312-d31b-4f12-93e4-1c3bf1b25955.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM5OTMyNTksIm5iZiI6MTc0Mzk5Mjk1OSwicGF0aCI6Ii8yMDE0NjI4MjgvNDMwNzY2NDE2LWJmMWQ3MzEyLWQzMWItNGYxMi05M2U0LTFjM2JmMWIyNTk1NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwN1QwMjI5MTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01YjUyYzdjOGIxMjAxZWU1OWUzOGI3YzMxMmE3ODBkYmM3ZTkyMzE5Y2Y5YTBiNGE3ZTU1Y2Q3OTljNjMzYzFiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.f2SGxDp0rBn7SccQkAfmrtPFl-LSQ6TLldr5-HBUfo0)
 
 **Insights**:
-- Top Sellers have the highest average listing price (~$336.08), followed by Rising Sellers (~$331.18).
-- New Sellers list at lower prices (~$248.62) — likely as a strategy to remain competitive and attract buyers.
+- Top Sellers have the highest average listing price ($336.08), followed by Rising Sellers ($331.18).
+- New Sellers list at lower prices ($248.62) — likely as a strategy to remain competitive and attract buyers.
 - The gap between Top and Rising Sellers is small, indicating price convergence among experienced sellers, while New Sellers undercut slightly to compensate for lower reputation.
 
 ---
