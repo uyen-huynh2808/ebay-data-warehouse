@@ -46,13 +46,6 @@ WITH base AS (
         l.ShippingCost >= 0
 ),
 
--- Calculate IQR and remove outliers
-price_stats AS (
-    SELECT
-        APPROX_QUANTILES(Price, 4) AS price_quantiles
-    FROM base
-),
-
 -- Filter out outliers based on the IQR
 filtered_base AS (
     SELECT
@@ -72,10 +65,7 @@ filtered_base AS (
         b.Shipping_Cost,
         b.Total_Cost
     FROM base b
-    CROSS JOIN price_stats ps
-    WHERE b.Price >= ps.price_quantiles[OFFSET(1)] - 1.5 * (ps.price_quantiles[OFFSET(2)] - ps.price_quantiles[OFFSET(0)])  -- Price >= Q1 - 1.5 * IQR
-      AND b.Price <= ps.price_quantiles[OFFSET(3)] + 1.5 * (ps.price_quantiles[OFFSET(2)] - ps.price_quantiles[OFFSET(0)])  -- Price <= Q3 + 1.5 * IQR
-      AND b.Price >= 100  -- Filter out listings with a price lower than $100
+    WHERE b.Price >= 100  -- Filter out listings with a price lower than $100
 )
 
 SELECT
