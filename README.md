@@ -70,7 +70,7 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
    - condition_id (PK)
    - condition_name (New, Used, Refurbished, ...)
 
-![dbdiagram](https://github.com/uyen-huynh2808/ebay-data-warehouse/issues/8#issue-2975446384)
+![dbdiagram](https://private-user-images.githubusercontent.com/201462828/430765383-cdd34865-1a80-4495-a71a-77b8a2be1b9f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM5OTI1NzIsIm5iZiI6MTc0Mzk5MjI3MiwicGF0aCI6Ii8yMDE0NjI4MjgvNDMwNzY1MzgzLWNkZDM0ODY1LTFhODAtNDQ5NS1hNzFhLTc3YjhhMmJlMWI5Zi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwN1QwMjE3NTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lZjIwNzg4YmY2OWNjZGU0Njg2YmUzNWZlMDE4ZGZlYjBiNjRiNzI3NmU5NGI5NTlmYjdiYmNkMDkxMzBjMWIyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.U_LdXMjpXJUCg9LsJ8eJoVj-z54wejwMcLRwjvGPkog)
 
 ## Future Enhancements
 - Expand to **AWS Redshift & Snowflake** for multi-cloud compatibility.
