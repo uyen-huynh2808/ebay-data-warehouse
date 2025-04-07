@@ -54,7 +54,7 @@ This document summarizes the visual insights obtained from three analytical data
 - This indicates that new products span both entry-level and premium segments, justifying their broader price spread. Used and Refurbished items also cover a wide range but are generally capped at lower maximum prices, reflecting market expectations for second-hand or restored goods.
 - The similar minimum prices (~$50) across all conditions suggest competitive entry-level pricing, but the max price differences highlight the higher perceived value and pricing flexibility of brand-new items.
 
-###Conclusion:
+### **Conclusion:**
 - New items dominate the high-price end, inflating their average.
 - Used and Refurbished are more value-driven, leading to lower averages despite some higher-priced listings.
 
