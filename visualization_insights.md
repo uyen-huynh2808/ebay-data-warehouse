@@ -69,7 +69,9 @@ This document summarizes the visual insights obtained from three analytical data
 ![Price-Tendency-Distribution](https://github.com/user-attachments/assets/ffee25c7-ae5b-419e-8348-03e1eb806336)
 
 **Insights**:
-
+- Spike Price listings are the most common (2,870), followed closely by Stable Price listings (2,694), while Drop Price listings are rare (only 98).
+- This suggests that most sellers either maintain consistent pricing or experiment with sudden price increases—possibly to test market response, create urgency, or reflect high demand. The scarcity of Drop Price listings indicates that few sellers adopt markdown strategies, potentially favoring perceived value retention or avoiding pricing wars.
+- The dominance of Spike and Stable trends highlights a seller preference for either static pricing or dynamic pricing tactics aimed at maximizing visibility or profit, rather than gradual price drops.
 
 ### **Chart 2: Min and Max Price by Price Tendency (Line Chart)**
 - **X-axis**: `Price_Tendency`  
