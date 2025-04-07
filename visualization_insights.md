@@ -39,7 +39,9 @@ This document summarizes the visual insights obtained from three analytical data
 ![Average-Price-by-Condition-Category](https://github.com/user-attachments/assets/470c1c42-1de0-4808-a577-011bf5f8acd9)
 
 **Insights**:
-
+- New items have the highest average price ($849.17), significantly more than Used ($353.23) and Refurbished ($329.43) items.
+- This reflects the premium buyers are willing to pay for brand-new products, which often come with full warranties and no prior usage. Used and Refurbished items are priced similarly, indicating they target more budget-conscious buyers seeking value over novelty.
+- The lower average prices for Refurbished and Used items suggest strong demand in the secondary market, where price sensitivity plays a bigger role in purchasing decisions.
 
 ### **Chart 2: Min and Max Price by Condition Category (Line Chart)**
 - **X-axis**: `Condition_Category`  
