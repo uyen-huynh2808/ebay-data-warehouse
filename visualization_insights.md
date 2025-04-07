@@ -13,9 +13,9 @@ This document summarizes the visual insights obtained from three analytical data
 ![Total-Listings-by-Seller-Tier](https://github.com/user-attachments/assets/13622800-3c57-401c-aa01-3bb529fa4604)
 
 **Insights**:
-- Top Sellers account for the majority of listings, indicating their strong foothold in the marketplace.
-- Rising Sellers make up a moderate share, suggesting potential for growth.
-- New Sellers have the fewest listings, which may reflect barriers to entry or early-stage participation.
+- New Sellers contribute the highest number of listings (3,406), more than double those of Rising or Top Sellers.
+- This is likely due to a larger number of New Sellers overall — each contributing a small number of listings — whereas Top Sellers, though fewer in number, may focus on quality, strategic pricing, or higher-value items.
+- The relatively lower listing count for Top Sellers (1,386) does not indicate inactivity, but rather a concentrated seller base with optimized inventories.
 
 ### **Chart 2: Average Price by Seller Tier (Bar Chart)**
 - **X-axis**: `Seller_Tier`  
