@@ -83,3 +83,8 @@ This document summarizes the visual insights obtained from three analytical data
 - Stable Price listings span the full price range ($50 to $5000), while Drop Price and Spike Price patterns also start around $50 but peak at $1953.43 and $4877.70, respectively.
 - This suggests that listings with stable pricing cover a wide spectrum, including both low- and high-end products. Drop Price listings, with a lower max price, likely represent items undergoing price reductions to attract buyers—often in mid-range segments.
 - Spike Price listings, reaching up to ~$4877.70, may reflect sudden, short-term increases in value—potentially due to rarity, demand surges, or pricing errors. Despite similar starting prices, the variations in max price reflect distinct pricing strategies or market behaviors tied to product type and seller tactics.
+
+### **Conclusion:**
+- Spike and Stable pricing are the main strategies.
+- Drop pricing is rare and used on mid-priced products.
+- Stable pricing covers the most diverse range of products, from budget to premium.
