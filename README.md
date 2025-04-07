@@ -78,6 +78,6 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 3. `bigquery_schema.sql` – Defines BigQuery table schema.
 4. `etl_pipeline.py` – Extracts data from Google Cloud Storage, transforms and loads it into BigQuery.
 5. `models/` – dbt SQL models for data transformations.
-6. `visualization_insight.md` – Document outlining the visualizations and insights for Looker Studio.
+6. `visualization_insights.md` – Document outlining the visualizations and insights for Looker Studio.
 
 ---
