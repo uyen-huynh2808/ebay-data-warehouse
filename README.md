@@ -1,7 +1,7 @@
 # E-Commerce Laptop Listings Analytics Data Warehouse (eBay - BigQuery - Looker)
 
 ## Introduction
-This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop Listings Analytics**, leveraging cloud data warehousing, ETL, and BI tools to analyze **seller performance, competition, and price trends**. The data is sourced from **eBay API**, transformed using **dbt**, and visualized in **Looker Studio**. The solution is built on **Google BigQuery** but designed to be expandable to **AWS Redshift and Snowflake**.
+This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop Listings Analytics**, leveraging cloud data warehousing, ETL, and BI tools to analyze **seller performance, competition, and price trends**. The data is sourced from **eBay API**, transformed using **dbt**, and visualized in **Looker Studio**. The solution is built on **Google BigQuery**.
 
 ## Project Goals
 1. **Seller Performance & Competition**
@@ -71,12 +71,6 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
    - condition_name (New, Used, Refurbished, ...)
 
 ![dbdiagram](https://private-user-images.githubusercontent.com/201462828/430765383-cdd34865-1a80-4495-a71a-77b8a2be1b9f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM5OTI1NzIsIm5iZiI6MTc0Mzk5MjI3MiwicGF0aCI6Ii8yMDE0NjI4MjgvNDMwNzY1MzgzLWNkZDM0ODY1LTFhODAtNDQ5NS1hNzFhLTc3YjhhMmJlMWI5Zi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwN1QwMjE3NTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lZjIwNzg4YmY2OWNjZGU0Njg2YmUzNWZlMDE4ZGZlYjBiNjRiNzI3NmU5NGI5NTlmYjdiYmNkMDkxMzBjMWIyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.U_LdXMjpXJUCg9LsJ8eJoVj-z54wejwMcLRwjvGPkog)
-
-## Future Enhancements
-- Expand to **AWS Redshift & Snowflake** for multi-cloud compatibility.
-- Enhance **competitor pricing analysis** using ML models.
-- Implement **real-time listing monitoring** with streaming data pipelines.
-- Include **customer sentiment analysis** from product reviews.
 
 ## Project Files
 1. `scraper.py` – Scrapes laptop listings from eBay.
