@@ -64,7 +64,7 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 
 3. **dim_sellers** (Stores seller details)
    - seller_id (PK)
-   - seller_feedback_score
+   - feedback_score
    
 4. **dim_conditions** (Stores item condition details)
    - condition_id (PK)
