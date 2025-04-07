@@ -50,7 +50,9 @@ This document summarizes the visual insights obtained from three analytical data
 ![Min-and-Max-Price-by-Condition-Category](https://github.com/user-attachments/assets/fa84667c-63d1-43c7-b65e-e5644d8949c2)
 
 **Insights**:
-
+- New items show the widest price range ($55.08 to $5000), followed by Used ($50 to $3500) and Refurbished ($50 to $2999).
+- This indicates that new products span both entry-level and premium segments, justifying their broader price spread. Used and Refurbished items also cover a wide range but are generally capped at lower maximum prices, reflecting market expectations for second-hand or restored goods.
+- The similar minimum prices (~$50) across all conditions suggest competitive entry-level pricing, but the max price differences highlight the higher perceived value and pricing flexibility of brand-new items.
 
 ---
 
