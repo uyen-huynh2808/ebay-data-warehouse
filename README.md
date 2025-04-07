@@ -50,7 +50,7 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
    - listing_id (PK) (FK)
    - seller_id (FK)
    - condition_id (FK)
-   - listing_price
+   - price
    - currency
    - shipping_cost
 
