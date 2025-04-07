@@ -24,6 +24,9 @@ This document summarizes the visual insights obtained from three analytical data
 ![Average-Price-by-Seller-Tier](https://github.com/user-attachments/assets/38e6f2b8-7c0e-4456-acfa-783369d3bf14)
 
 **Insights**:
+- Top Sellers have the highest average price ($374.71), followed closely by Rising Sellers ($373.45), while New Sellers list items at a significantly lower average price ($281.64).
+- This suggests that experienced sellers are able to command higher prices, likely due to better product quality, trust, and optimized listings. Rising Sellers are already approaching Top Seller pricing, indicating growing confidence and value perception.
+- The lower average price from New Sellers may reflect entry-level strategies—such as underpricing to attract buyers, limited reputation, or lower-value inventory.
 
 ---
 
