@@ -58,6 +58,24 @@ This document summarizes the visual insights obtained from three analytical data
 - Refurbished laptops are generally more affordable, with prices ranging from $7.99 to $2,999.
 - These ranges show clear segmentation by condition, with new laptops targeting both budget and premium buyers, used laptops covering a broad spectrum, and refurbished laptops catering to price-sensitive buyers
 
+### **Comparison**
+**New Laptops:**
+- Average Price: $726.95
+- Min Price: ~$11.79
+- Max Price: ~$5,000
+- Insight: The average price is significantly lower than the max price (~$5,000), indicating that the high-end models significantly skew the pricing, while most new laptops are likely priced lower, closer to the min price.
+**Used Laptops:**
+- Average Price: $336.88
+- Min Price: ~$9.99
+- Max Price: ~$3,500
+- Insight: The average price is much higher than the min price, which is very low (~$9.99), suggesting that the majority of used laptops fall within a mid-range price, with only a few premium or high-condition laptops reaching near $3,500.
+**Refurbished Laptops:**
+- Average Price: $297.89
+- Min Price: ~$7.99
+- Max Price: ~$2,999
+- Insight: The average price is again much higher than the min price (~$7.99), indicating that most refurbished laptops are priced closer to the middle of the range, with a few premium refurbished models reaching near $3,000.
+**Conclusion:**
+The average prices tend to be much more representative of the middle of the price range, while the min/max prices show the extremes, with a few high-end models pushing the upper limit. This highlights that while new laptops can reach very high prices, most are priced lower. Similarly, used and refurbished laptops mostly fall within a narrower, more affordable range, but still include some outliers at the top.
 ---
 
 ## 3. Price Trends (`mart_price_trends`)
