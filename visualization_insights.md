@@ -53,9 +53,10 @@ This document summarizes the visual insights obtained from three analytical data
 ![Min-and-Max-Price-by-Condition-Category](https://private-user-images.githubusercontent.com/201462828/430766612-7cffd267-583c-4a58-b83c-bd6ab2a98f8b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM5OTMzNTMsIm5iZiI6MTc0Mzk5MzA1MywicGF0aCI6Ii8yMDE0NjI4MjgvNDMwNzY2NjEyLTdjZmZkMjY3LTU4M2MtNGE1OC1iODNjLWJkNmFiMmE5OGY4Yi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwN1QwMjMwNTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MzhiNTc0ZDE0NGNmYjFhM2MyNGIzYzliNjJhMDNhMjI3MTY5NTM0N2ExMzVlMDc3YjQ4NDU3ZWEwODg2YzVmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.NSEIAZnOJumtfyYYIqw7HldzhQnHOwlomGs74dl1CPI)
 
 **Insights**:
-- New items have a wide price range, suggesting varying specifications and models.
-- Refurbished listings show a narrower range, possibly due to standardized repair/refurbishing practices.
-- Used items show the highest price variability, which may stem from differences in wear, age, or seller credibility.
+- New laptops have the highest price range, from budget models ($11.79) to premium ones ($5,000).
+- Used laptops also span a wide range ($9.99 to $3,500), reflecting varying conditions.
+- Refurbished laptops are generally more affordable, with prices ranging from $7.99 to $2,999.
+- These ranges show clear segmentation by condition, with new laptops targeting both budget and premium buyers, used laptops covering a broad spectrum, and refurbished laptops catering to price-sensitive buyers
 
 ---
 
