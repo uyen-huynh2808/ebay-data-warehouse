@@ -5,13 +5,13 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop L
 
 ## Project Goals
 1. **Seller Performance & Competition**
-   - Identify top-performing laptop sellers based on listing metrics.
-   - Compare sellers based on listing volume, pricing, and feedback score.
+   - Identify top-performing laptop sellers based on metrics such as listing volume, and feedback score.
+   - Explore the **concentration of seller tiers**: New Sellers, Rising Sellers, and Top Sellers. New Sellers contribute the most listings, but Top Sellers might offer higher-quality products despite having fewer listings.
    
 2. **Price Trends & Competitor Pricing**
-   - Track price variations for laptop models across different sellers.
-   - Analyze pricing strategies by condition (New, Used, Refurbished).
-   - Monitor trends for popular laptop brands and specifications.
+   - Track **price variations** for laptop models across different sellers.
+   - Analyze pricing strategies based on **condition** (New, Used, Refurbished), including price averages, min/max ranges, and tendency.
+   - Compare **pricing patterns** across different seller tiers and identify opportunities for competitive pricing.
 
 ## Architecture
 ### **1. Data Ingestion**
@@ -23,7 +23,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop L
 - Transform and structure data using **dbt (Data Build Tool)**.
 
 ### **3. Business Intelligence (BI)**
-- Build dashboards in **Looker Studio** to track seller performance and pricing trends.
+- Insights such as **listing counts by seller tier**, **average prices by seller tier and condition**, and **price tendencies (Spike, Stable, Drop)** are visualized for deeper analysis.
 
 ![architecture](https://github.com/user-attachments/assets/97f4f182-6190-4fa4-a417-1c697f8a47ad)
 
@@ -33,7 +33,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop L
 | Data Source     | **eBay API** |
 | Data Storage    | **Google Cloud Storage (GCS)** |
 | Data Warehouse  | **Google BigQuery** |
-| ETL Processing  | **dbt (CLI version)** |
+| ETL Processing  | **dbt (IDE version)** |
 | BI & Reporting  | **Looker Studio** |
 
 ## Dataset Used
@@ -79,11 +79,11 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 - Include **customer sentiment analysis** from product reviews.
 
 ## Project Files
-1. `scraper.py` – Scrape laptop listings from eBay.
-2. `load_to_gcs.py` – Upload raw data to Google Cloud Storage.
-3. `bigquery_schema.sql` – Define BigQuery table schema.
+1. `scraper.py` – Scrapes laptop listings from eBay.
+2. `load_to_gcs.py` – Uploads raw data to Google Cloud Storage.
+3. `bigquery_schema.sql` – Defines BigQuery table schema.
 4. `etl_pipeline.py` – Extracts data from Google Cloud Storage, transforms and loads it into BigQuery.
-5. `dbt_models/` – dbt SQL models for data transformations.
-6. `dashboard_setup.lookml` – Configure Looker dashboard.
+5. `models/` – dbt SQL models for data transformations.
+6. `visualization_insight.md` – Document outlining the visualizations and insights for Looker Studio.
 
 ---
