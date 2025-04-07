@@ -39,9 +39,12 @@ This document summarizes the visual insights obtained from three analytical data
 ![Average-Price-by-Condition-Category](https://private-user-images.githubusercontent.com/201462828/430766515-e24f3c70-3d1d-425d-abb8-d6b1d5d50e55.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM5OTMzMjEsIm5iZiI6MTc0Mzk5MzAyMSwicGF0aCI6Ii8yMDE0NjI4MjgvNDMwNzY2NTE1LWUyNGYzYzcwLTNkMWQtNDI1ZC1hYmI4LWQ2YjFkNWQ1MGU1NS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwN1QwMjMwMjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT01MTI0ZGRjNGY4YmQzOTI1NzkxYjYwNDViN2VjYjkwOTRkMjc5MzJmOWU0NTE5Y2EyY2E5MzEwMWIyYWVmMmIxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.z-QA83LXxVacIaozpQWFici-pHbOPrkVjswg-1UFYLI)
 
 **Insights**:
-- New Listings have the highest average prices, reflecting their pristine condition and original packaging.
-- Refurbished items are priced lower than new but higher than used, offering a balance of quality and affordability.
-- Used Listings have the lowest average prices, appealing to budget-conscious buyers.
+
+- New laptops are priced significantly higher ($726.95), reflecting their premium status.
+- Used laptops ($336.88) are priced higher than refurbished laptops ($297.89), possibly due to variation in condition.
+- Refurbished laptops are the most affordable, indicating a trade-off between price and trust in quality.
+- Market Segmentation: New, used, and refurbished laptops target different consumer segments based on price sensitivity and condition preferences.
+- Seller Strategy: New listings likely target high-value buyers, while used and refurbished listings appeal to budget-conscious consumers.
 
 ### **Chart 2: Min and Max Price by Condition Category (Line Chart)**
 - **X-axis**: `Condition_Category`  
