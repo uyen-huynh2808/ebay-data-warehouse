@@ -70,7 +70,7 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
    - condition_id (PK)
    - condition_name (New, Used, Refurbished, ...)
 
-![dbdiagram](https://github.com/user-attachments/assets/079627ad-5c46-451a-beef-8d11b32aa49f)
+![dbdiagram]()
 
 ## Future Enhancements
 - Expand to **AWS Redshift & Snowflake** for multi-cloud compatibility.
