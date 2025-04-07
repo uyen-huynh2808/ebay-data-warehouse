@@ -6,11 +6,11 @@ This document summarizes the visual insights obtained from three analytical data
 
 ## 1. Seller Performance (`mart_seller_performance`)
 
-### **Chart 1: Average Total Listings by Seller Tier (Bar Chart)**
+### **Chart 1: Total Listings by Seller Tier (Bar Chart)**
 - **X-axis**: `Seller_Tier` (Top Seller, Rising Seller, New Seller)  
-- **Y-axis**: `Total_Listings (Avg)`
+- **Y-axis**: `Total_Listings`
 
-![Average-Total-Listings-by-Seller-Tier](https://private-user-images.githubusercontent.com/201462828/430766340-30f9461b-8a25-4bde-90f6-74b18d7f995d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDM5OTMxOTMsIm5iZiI6MTc0Mzk5Mjg5MywicGF0aCI6Ii8yMDE0NjI4MjgvNDMwNzY2MzQwLTMwZjk0NjFiLThhMjUtNGJkZS05MGY2LTc0YjE4ZDdmOTk1ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNDA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDQwN1QwMjI4MTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1mZWFjYzA4ZWI0N2JkZjA5OTliZmVhZDg2MTRmY2FkMWEyOGRiZjg2NTc5NTA3ZGM4ODg3NTlmMTcwNGFjYmVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.aTDBC7y0xoFZGnozQdjHwxASQatm_i2V8b9w_FOo4FQ)
+![Total-Listings-by-Seller-Tier](https://github.com/user-attachments/assets/13622800-3c57-401c-aa01-3bb529fa4604)
 
 **Insights**:
 - Top Sellers account for the majority of listings, indicating their strong foothold in the marketplace.
