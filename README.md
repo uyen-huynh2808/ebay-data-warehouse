@@ -1,4 +1,4 @@
-# E-Commerce Laptop Listings Analytics Data Warehouse (eBay - BigQuery - Looker)
+# E-Commerce Laptop Listings Analytics Data Warehouse (eBay - BigQuery - dbt - Looker)
 
 ## Introduction
 This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop Listings Analytics**, leveraging cloud data warehousing, ETL, and BI tools to analyze **seller performance, competition, and price trends**. The data is sourced from **eBay API**, transformed using **dbt**, and visualized in **Looker Studio**. The solution is built on **Google BigQuery**.
