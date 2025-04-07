@@ -65,7 +65,7 @@ filtered_base AS (
         b.Shipping_Cost,
         b.Total_Cost
     FROM base b
-    WHERE b.Price >= 100  -- Filter out listings with a price lower than $100
+    WHERE b.Price >= 50  -- Filter out listings with a price lower than $100
 )
 
 SELECT
