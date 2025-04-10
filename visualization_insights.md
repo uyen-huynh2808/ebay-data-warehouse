@@ -13,9 +13,10 @@ This document summarizes the visual insights obtained from three analytical data
 ![Total-Listings-by-Seller-Tier](https://github.com/user-attachments/assets/94776d2f-dffa-488e-b74c-1d7b32bda75f)
 
 **Insights**:
-- New Sellers contribute the highest number of listings (2,997), more than double those of Rising (1,435) or Top Sellers (1,230).
-- This is likely due to a larger number of New Sellers overall — each contributing a small number of listings — whereas Top Sellers, though fewer in number, may focus on quality, strategic pricing, or higher-value items.
-- The relatively lower listing count for Top Sellers does not indicate inactivity, but rather a concentrated seller base with optimized inventories.
+- New Sellers have the highest total listings (2,997), likely because there are many of them, not because each lists a lot.
+- Top Sellers have the fewest total listings (1,230), suggesting there are fewer in this tier, but they likely list more per seller.
+- Since tiers are based on listings per seller and feedback score, this chart reflects seller distribution, not quality.
+- It implies Top Sellers are more efficient and higher quality, even if fewer in number.
 
 ### **Chart 2: Average Price by Seller Tier (Bar Chart)**
 - **X-axis**: `Seller_Tier`  
