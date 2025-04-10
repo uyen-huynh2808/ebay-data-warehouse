@@ -5,15 +5,15 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop L
 
 ## Project Goals
 1. **Seller Performance & Competition**
-   - Identify top-performing laptop sellers based on metrics such as listing volume, and feedback score.
-   - Analyze the **distribution of seller tiers**: *New Sellers*, *Rising Sellers*, and *Top Sellers*.
+- Identify top-performing laptop sellers based on metrics such as listing volume, and feedback score.
+- Analyze the **distribution of seller tiers**: *New Sellers*, *Rising Sellers*, and *Top Sellers*.
     - **New Sellers** contribute the highest total listings, likely due to their large numbers.
     - **Top Sellers**, while fewer, may offer **higher-quality listings** and demonstrate **greater efficiency per seller**.
    
 2. **Price Trends & Competitor Pricing**
-   - Track **price variations** for laptop models across different sellers.
-   - Analyze pricing strategies based on **condition** (New, Used, Refurbished), including price averages, min/max ranges, and tendency.
-   - Compare **pricing patterns** across different seller tiers and identify opportunities for competitive pricing.
+- Track **price variations** for laptop models across different sellers.
+- Analyze pricing strategies based on **condition** (New, Used, Refurbished), including price averages, min/max ranges, and tendency.
+- Compare **pricing patterns** across different seller tiers and identify opportunities for competitive pricing.
 
 ## Architecture
 ### **1. Data Ingestion**
