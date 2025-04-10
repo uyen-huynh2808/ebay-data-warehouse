@@ -15,7 +15,7 @@ This document summarizes the visual insights obtained from three analytical data
 **Insights**:
 - New Sellers have the highest total listings (2,997), likely because there are many of them, not because each lists a lot.
 - Top Sellers have the fewest total listings (1,230), suggesting there are fewer in this tier, but they likely list more per seller.
-- Since tiers are based on listings per seller and feedback score, this chart reflects seller distribution, not quality.
+- Since tiers are based on listings per seller and feedback score, this chart reflects seller distribution.
 - It implies Top Sellers are more efficient and higher quality, even if fewer in number.
 
 ### **Chart 2: Average Price by Seller Tier (Bar Chart)**
