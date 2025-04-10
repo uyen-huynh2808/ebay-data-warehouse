@@ -4,13 +4,13 @@
 This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop Listings Analytics**, leveraging cloud data warehousing, ETL, and BI tools to analyze **seller performance, competition, and price trends**. The data is sourced from **eBay API**, transformed using **dbt**, and visualized in **Looker Studio**. The solution is built on **Google BigQuery**.
 
 ## Project Goals
-1. **Seller Performance & Competition**
+### 1. **Seller Performance & Competition**
 - Identify top-performing laptop sellers based on metrics such as listing volume, and feedback score.
 - Analyze the **distribution of seller tiers**: *New Sellers*, *Rising Sellers*, and *Top Sellers*.
     - **New Sellers** contribute the highest total listings, likely due to their large numbers.
     - **Top Sellers**, while fewer, may offer **higher-quality listings** and demonstrate **greater efficiency per seller**.
    
-2. **Price Trends & Competitor Pricing**
+### 2. **Price Trends & Competitor Pricing**
 - Track **price variations** for laptop models across different sellers.
 - Analyze pricing strategies based on **condition** (New, Used, Refurbished), including price averages, min/max ranges, and tendency.
 - Compare **pricing patterns** across different seller tiers and identify opportunities for competitive pricing.
