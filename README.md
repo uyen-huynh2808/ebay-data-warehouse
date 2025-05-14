@@ -82,4 +82,13 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 5. `models/` – dbt SQL models for data transformations.
 6. `visualization_insights.md` – Document outlining the visualizations and insights for Looker Studio.
 
+## Conclusion
+
+- Demonstrated the development of an end-to-end cloud-based data warehouse solution tailored for e-commerce analytics.
+
+- Successfully integrated eBay API, Google Cloud Storage, BigQuery, dbt, and Looker Studio to deliver actionable insights on seller behavior and pricing dynamics.
+
+- Enabled strategic decision-making through interactive dashboards on seller segmentation, pricing trends, and competitive positioning.
+
+- This project highlights core data engineering competencies, from data ingestion and modeling to transformation, visualization, and business impact.
 ---
