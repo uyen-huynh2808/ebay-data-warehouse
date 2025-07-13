@@ -82,13 +82,25 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 5. `models/` – dbt SQL models for data transformations.
 6. `visualization_insights.md` – Document outlining the visualizations and insights for Looker Studio.
 
+## Limitations
+
+- Limited Historical Depth: The eBay API only provides recent listing data, making long-term trend analysis challenging without continuous data collection over time.
+- Sampling Bias: Data collected may not fully represent all laptop listings due to rate limits and API pagination constraints.
+- Static Seller Tier Classification: Current seller tier segmentation is based on snapshot metrics (e.g., feedback score), which may not reflect ongoing seller performance changes.
+- No Real-Time Pipeline: The ETL process is batch-based; real-time monitoring of listing or pricing dynamics is not currently supported.
+
+## Future Developments
+
+- Incremental Loading with Change Data Capture (CDC): Implement CDC logic in dbt to support incremental transformations and reduce processing time.
+- Historical Snapshot Layer: Create a time-partitioned snapshot table in BigQuery to capture listing state over time for robust trend and survival analysis.
+- Enhanced Seller Profiling: Integrate additional seller metadata (e.g., shipping speed, return policy) to enrich seller segmentation.
+- Real-Time Dashboard: Integrate Dataflow or Pub/Sub to enable streaming ingestion and near real-time dashboard updates.
+- Automated Reporting: Set up scheduled Looker Studio reports or Slack alerts for sudden pricing changes or top seller activity spikes.
+
 ## Conclusion
 
 - Demonstrated the development of an end-to-end cloud-based data warehouse solution tailored for e-commerce analytics.
-
 - Successfully integrated eBay API, Google Cloud Storage, BigQuery, dbt, and Looker Studio to deliver actionable insights on seller behavior and pricing dynamics.
-
 - Enabled strategic decision-making through interactive dashboards on seller segmentation, pricing trends, and competitive positioning.
-
 - This project highlights core data engineering competencies, from data ingestion and modeling to transformation, visualization, and business impact.
 ---
