@@ -81,6 +81,7 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 4. `etl_pipeline.py` – Extracts data from Google Cloud Storage, transforms and loads it into BigQuery.
 5. `models/` – dbt SQL models for data transformations.
 6. `visualization_insights.md` – Document outlining the visualizations and insights for Looker Studio.
+7. `Dashboard_eBay_Laptop_Listings.pdf` – A static PDF export of the Looker Studio dashboard.
 
 ## Limitations
 
