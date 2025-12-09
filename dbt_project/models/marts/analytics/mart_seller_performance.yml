@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: mart_seller_performance
+    description: >
+      A reporting model for seller segmentation and leaderboard analysis.
+      It provides a consolidated view of seller reputation, scale, and performance tiers.
+    columns:
+      - name: seller_id
+        description: "The unique identifier of the seller."
+        tests:
+          - unique
+          - not_null
+
+      - name: feedback_score
+        description: "The seller's feedback percentage."
+        tests:
+          - not_null
+
+      - name: total_listings
+        description: "The total count of active listings for this seller."
+        tests:
+          - not_null
+
+      - name: avg_item_price
+        description: "The average price across all items sold by this seller."
+        tests:
+          - not_null
+
+      - name: total_gross_merchandise_value
+        description: "Total potential revenue (sum of prices) for this seller."
+        tests:
+          - not_null
+
+      - name: seller_tier
+        description: "Performance classification (Top Seller, Rising Seller, New Seller, Regular Seller)."
+        tests:
+          - not_null

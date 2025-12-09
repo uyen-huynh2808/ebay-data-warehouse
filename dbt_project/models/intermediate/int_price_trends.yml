@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: int_price_trends
+    description: >
+      Analyzes pricing strategies at the seller level, segmented by brand.
+      This model enables the identification of sellers who specialize in specific brands
+      or adopt premium/discount pricing strategies.
+    columns:
+      - name: brand
+        description: "The laptop brand being sold."
+        tests:
+          - not_null
+
+      - name: seller_id
+        description: "The unique identifier (username) of the seller."
+        tests:
+          - not_null
+
+      - name: total_listings
+        description: "The number of listings this seller has for the specific brand."
+        tests:
+          - not_null
+
+      - name: avg_selling_price
+        description: "The average price set by this seller for the specific brand."
+        tests:
+          - not_null
+
+      - name: min_selling_price
+        description: "The minimum price set by this seller for the specific brand."
+        tests:
+          - not_null
+
+      - name: max_selling_price
+        description: "The maximum price set by this seller for the specific brand."
+        tests:
+          - not_null

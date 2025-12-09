@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: fact_laptop_listings
+    description: >
+      The central fact table for the Laptop Listings Data Warehouse.
+      Contains transactional data including pricing and shipping costs, linked to all core dimensions.
+    columns:
+      - name: listing_id
+        description: "The unique identifier for the listing. Acts as the Primary Key."
+        tests:
+          - unique
+          - not_null
+
+      - name: laptop_id
+        description: "Foreign Key linking to dim_laptops."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_laptops')
+              field: laptop_id
+
+      - name: seller_id
+        description: "Foreign Key linking to dim_sellers."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_sellers')
+              field: seller_id
+
+      - name: condition_id
+        description: "Foreign Key linking to dim_conditions."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_conditions')
+              field: condition_id
+
+      - name: price
+        description: "The listed price of the item."
+        tests:
+          - not_null
+
+      - name: currency
+        description: "The ISO currency code for the price."
+        tests:
+          - not_null
+
+      - name: shipping_cost
+        description: "The cost of shipping for the item."
+        tests:
+          - not_null
+
+      - name: total_cost
+        description: "The total acquisition cost (Price + Shipping)."
+        tests:
+          - not_null

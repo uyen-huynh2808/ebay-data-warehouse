@@ -1,0 +1,107 @@
+version: 2
+
+sources:
+  - name: ebay_source
+    description: "Raw data loaded from eBay API via GCS."
+    database: your-gcp-project-id  # UPDATE THIS to your actual GCP Project ID
+    schema: raw_ebay
+    tables:
+      - name: laptop_listings
+        description: "Raw flat file containing laptop listings, prices, and seller info."
+        loaded_at_field: _PARTITIONDATE # Optional: If you use BQ partitioning
+        columns:
+          - name: listing_id
+            tests:
+              - unique
+              - not_null
+
+models:
+  - name: stg_ebay_listings
+    description: >
+      Staging model that cleans raw eBay listings. 
+      It standardizes column names, deduplicates records based on Listing ID, 
+      and performs Regex-based feature extraction for specifications (RAM, Storage).
+    columns:
+      - name: listing_id
+        description: "The unique identifier for each listing."
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        description: "The original title of the listing."
+        tests:
+          - not_null
+
+      - name: seller_username
+        description: "The username of the seller."
+        tests:
+          - not_null
+
+      - name: seller_feedback_score
+        description: "The seller's feedback percentage score (0-100)."
+        tests:
+          - not_null
+
+      - name: condition_id
+        description: "The raw condition identifier code from eBay."
+        tests:
+          - not_null
+
+      - name: condition_name
+        description: "The raw condition description (e.g., 'New', 'Open box')."
+        tests:
+          - not_null
+
+      - name: standard_condition
+        description: >
+          A derived classification grouping raw conditions into standardized buckets:
+          - "New": Brand new items.
+          - "Used": Used and Open box items.
+          - "Refurbished": Certified and Seller Refurbished items.
+          - "Broken": Items marked for parts or not working.
+          - "Other": Any unclassified conditions.
+        tests:
+          - accepted_values:
+              values: ['New', 'Used', 'Refurbished', 'Broken', 'Other']
+
+      - name: brand
+        description: "The laptop brand extracted from the title (e.g., Dell, Apple)."
+        tests:
+          - not_null
+
+      - name: storage_type
+        description: "The type of storage detected (SSD, HDD, or Unknown)."
+        tests:
+          - accepted_values:
+              values: ['SSD', 'HDD', 'Unknown']
+
+      - name: ram_size
+        description: "The extracted RAM size (e.g., '16GB'). Defaults to 'Unknown' if not detected."
+        tests:
+          - not_null
+
+      - name: storage_capacity
+        description: "The extracted Storage capacity (e.g., '512GB', '1TB'). Defaults to 'Unknown'."
+        tests:
+          - not_null
+
+      - name: price
+        description: "The listing price of the laptop."
+        tests:
+          - not_null
+
+      - name: currency
+        description: "The ISO currency code (e.g., USD)."
+        tests:
+          - not_null
+
+      - name: shipping_cost
+        description: "The cost of shipping. Defaults to 0 if free shipping."
+        tests:
+          - not_null
+
+      - name: total_cost
+        description: "The total acquisition cost (Price + Shipping Cost)."
+        tests:
+          - not_null

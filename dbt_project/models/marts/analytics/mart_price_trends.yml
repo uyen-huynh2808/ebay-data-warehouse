@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: mart_price_trends
+    description: >
+      A reporting model focused on seller pricing strategies and volatility.
+      It analyzes how individual sellers price specific brands compared to their own average,
+      identifying potential discounts or premiums.
+    columns:
+      - name: brand
+        description: "The laptop brand being sold."
+        tests:
+          - not_null
+
+      - name: seller_id
+        description: "The unique identifier of the seller."
+        tests:
+          - not_null
+
+      - name: avg_selling_price
+        description: "The average price this seller sets for the given brand."
+        tests:
+          - not_null
+
+      - name: min_selling_price
+        description: "The minimum price observed from this seller for the brand."
+        tests:
+          - not_null
+
+      - name: max_selling_price
+        description: "The maximum price observed from this seller for the brand."
+        tests:
+          - not_null
+
+      - name: total_listings
+        description: "The number of listings this seller has for the brand."
+        tests:
+          - not_null
+
+      - name: price_tendency
+        description: >
+          Indicates pricing volatility.
+          - 'Price Spike': Max price is >20% higher than the average.
+          - 'Price Drop': Min price is <20% lower than the average.
+          - 'Stable Price': Prices remain within the standard range.
+        tests:
+          - accepted_values:
+              values: ['Price Spike', 'Price Drop', 'Stable Price']

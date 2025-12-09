@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: dim_laptops
+    description: >
+      Dimension table containing technical specifications for each laptop unit.
+      Since specifications are extracted from individual listings, this table maintains a 1:1 relationship with listings.
+    columns:
+      - name: laptop_id
+        description: "The unique surrogate key for the laptop. Maps directly to the listing_id."
+        tests:
+          - unique
+          - not_null
+
+      - name: brand
+        description: "The manufacturer brand of the laptop."
+        tests:
+          - not_null
+
+      - name: ram_size
+        description: "The installed RAM capacity."
+        tests:
+          - not_null
+
+      - name: storage_type
+        description: "The technology of the storage drive (SSD vs HDD)."
+        tests:
+          - not_null
+
+      - name: storage_capacity
+        description: "The total storage capacity of the device."
+        tests:
+          - not_null

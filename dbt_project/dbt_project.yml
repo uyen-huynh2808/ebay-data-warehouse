@@ -1,0 +1,42 @@
+name: 'ebay_project'
+version: '1.0.0'
+config-version: 2
+
+# Connection profile configuration
+profile: 'default'
+
+# Resource paths
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations
+models:
+  ebay_project:
+    
+    # Staging Layer Configuration
+    # Materialized as tables to persist the results of resource-intensive 
+    # Regex extraction and data cleaning operations. This optimizes 
+    # query performance for downstream dependencies.
+    staging:
+      +materialized: table
+
+    # Intermediate Layer Configuration
+    # Materialized as views to serve as a logical transformation layer 
+    # without incurring additional storage costs.
+    intermediate:
+      +materialized: view
+
+    # Marts Layer Configuration (Core & Analytics)
+    # Materialized as tables to ensure low-latency query performance 
+    # for BI dashboards and end-user reporting tools.
+    marts:
+      +materialized: table

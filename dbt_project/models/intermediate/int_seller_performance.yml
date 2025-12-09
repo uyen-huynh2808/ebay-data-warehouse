@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: int_seller_performance
+    description: >
+      Consolidates seller metrics to evaluate performance and scale.
+      Includes a derived classification tier based on listing volume and feedback scores.
+    columns:
+      - name: seller_id
+        description: "The unique identifier (username) of the seller."
+        tests:
+          - unique
+          - not_null
+
+      - name: feedback_score
+        description: "The seller's feedback percentage score."
+        tests:
+          - not_null
+
+      - name: total_listings
+        description: "Total number of active listings across all brands."
+        tests:
+          - not_null
+
+      - name: avg_item_price
+        description: "The average price of all items sold by this seller."
+        tests:
+          - not_null
+
+      - name: total_gross_merchandise_value
+        description: "The sum of all listing prices for this seller, representing potential revenue."
+        tests:
+          - not_null
+
+      - name: seller_tier
+        description: >
+          Classification of the seller based on volume and reputation:
+          - "Top Seller": High volume (>50 listings) and High Feedback (>=98%).
+          - "Rising Seller": Moderate volume (10-49 listings) and Good Feedback (>=90%).
+          - "New Seller": Low volume (<10 listings).
+          - "Regular Seller": Established sellers not meeting Top/Rising criteria.
+        tests:
+          - accepted_values:
+              values: ['Top Seller', 'Rising Seller', 'New Seller', 'Regular Seller']

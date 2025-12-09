@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_sellers
+    description: >
+      Dimension table representing individual sellers on the platform. 
+      Includes aggregated performance metrics and tier classifications derived from listing history.
+    columns:
+      - name: seller_id
+        description: "The unique identifier (username) for the seller. Acts as the Primary Key."
+        tests:
+          - unique
+          - not_null
+
+      - name: feedback_score
+        description: "The seller's aggregate feedback percentage score."
+        tests:
+          - not_null
+
+      - name: seller_tier
+        description: "The performance tier classification (e.g., Top Seller, Rising Seller) based on volume and feedback."
+        tests:
+          - not_null

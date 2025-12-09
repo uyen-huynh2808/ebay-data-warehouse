@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_conditions
+    description: >
+      Dimension table defining the various condition states of listed items.
+      Provides both raw condition names and standardized groupings for analysis.
+    columns:
+      - name: condition_id
+        description: "The unique identifier for the condition. Acts as the Primary Key."
+        tests:
+          - unique
+          - not_null
+
+      - name: condition_name
+        description: "The original condition description provided by the source platform."
+        tests:
+          - not_null
+
+      - name: standard_condition
+        description: "A standardized category (New, Used, Refurbished, Broken) used for simplified reporting."
+        tests:
+          - not_null

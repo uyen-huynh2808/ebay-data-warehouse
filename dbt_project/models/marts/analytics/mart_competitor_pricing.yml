@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: mart_competitor_pricing
+    description: >
+      A reporting model designed for market benchmarking. It aggregates listing data by Brand and Condition
+      to provide average, minimum, and maximum price points. This table allows analysts to compare
+      specific market segments.
+    columns:
+      - name: brand
+        description: "The laptop manufacturer."
+        tests:
+          - not_null
+
+      - name: standard_condition
+        description: "The standardized condition of the items (New, Used, Refurbished)."
+        tests:
+          - not_null
+
+      - name: avg_market_price
+        description: "The average listing price within this specific brand and condition segment."
+        tests:
+          - not_null
+
+      - name: min_market_price
+        description: "The lowest observed price in this segment."
+        tests:
+          - not_null
+
+      - name: max_market_price
+        description: "The highest observed price in this segment."
+        tests:
+          - not_null
+
+      - name: total_listings
+        description: "The volume of listings analyzed in this segment."
+        tests:
+          - not_null
+
+      - name: condition_category
+        description: >
+          A user-friendly label for dashboard filtering.
+          Maps 'New' to 'New Listings', 'Used' to 'Used Listings', etc.
+        tests:
+          - not_null

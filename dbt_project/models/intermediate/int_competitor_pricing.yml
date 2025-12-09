@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: int_competitor_pricing
+    description: >
+      Aggregates pricing data by Laptop Brand and Condition to establish market price benchmarks.
+      This model facilitates the comparison of individual listing prices against the broader market average
+      for specific product categories.
+    columns:
+      - name: brand
+        description: "The laptop brand (e.g., Dell, Apple)."
+        tests:
+          - not_null
+
+      - name: standard_condition
+        description: "Standardized condition category (New, Used, Refurbished, Broken)."
+        tests:
+          - not_null
+
+      - name: total_listings
+        description: "The total volume of listings for this specific brand and condition."
+        tests:
+          - not_null
+
+      - name: avg_market_price
+        description: "The average market price for this segment."
+        tests:
+          - not_null
+
+      - name: min_market_price
+        description: "The lowest observed price in this segment."
+        tests:
+          - not_null
+
+      - name: max_market_price
+        description: "The highest observed price in this segment."
+        tests:
+          - not_null
