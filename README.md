@@ -1,7 +1,7 @@
 # E-Commerce Laptop Listings Analytics Data Warehouse (eBay - BigQuery - dbt - Looker)
 
 ## Introduction
-This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop Listings Analytics**, leveraging cloud data warehousing, ETL, and BI tools to analyze **seller performance, competition, and price trends**. The data is sourced from **eBay API**, transformed using **dbt**, and visualized in **Looker Studio**. The solution is built on **Google BigQuery**.
+This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop Listings Analytics**, leveraging cloud data warehousing, ELT, and BI tools to analyze **seller performance, competition, and price trends**. The data is sourced from **eBay API**, transformed using **dbt**, and visualized in **Looker Studio**. The solution is built on **Google BigQuery**.
 
 ## Project Goals
 ### 1. **Seller Performance & Competition**
@@ -37,7 +37,7 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop L
 | Data Source     | **eBay API** |
 | Data Storage    | **Google Cloud Storage (GCS)** |
 | Data Warehouse  | **Google BigQuery** |
-| ETL Processing  | **dbt (IDE version)** |
+| Transformation  | **dbt (IDE version)** |
 | BI & Reporting  | **Looker Studio** |
 
 ## Dataset Used
@@ -57,6 +57,7 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
    - price
    - currency
    - shipping_cost
+   - total_cost
 
 ### **Dimension Tables**
 2. **dim_laptops** (Stores laptop details)
@@ -69,14 +70,15 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 3. **dim_sellers** (Stores seller details)
    - seller_id (PK)
    - feedback_score
+   - seller_tier
    
 4. **dim_conditions** (Stores item condition details)
    - condition_id (PK)
    - condition_name (New, Used, Refurbished, ...)
+   - standard_condition
 
 ![dbdiagram](https://github.com/user-attachments/assets/cdd34865-1a80-4495-a71a-77b8a2be1b9f)
 
-## Project Files
 ## Project Structure
 ```text
 ├── data/                       # Sample raw data for testing
@@ -99,7 +101,7 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 - Limited Historical Depth: The eBay API only provides recent listing data, making long-term trend analysis challenging without continuous data collection over time.
 - Sampling Bias: Data collected may not fully represent all laptop listings due to rate limits and API pagination constraints.
 - Static Seller Tier Classification: Current seller tier segmentation is based on snapshot metrics (e.g., feedback score), which may not reflect ongoing seller performance changes.
-- No Real-Time Pipeline: The ETL process is batch-based; real-time monitoring of listing or pricing dynamics is not currently supported.
+- No Real-Time Pipeline: The ELT process is batch-based; real-time monitoring of listing or pricing dynamics is not currently supported.
 
 ## Future Developments
 
