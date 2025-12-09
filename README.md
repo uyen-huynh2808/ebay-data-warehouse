@@ -16,16 +16,18 @@ This project builds an **Enterprise Data Warehouse (EDW) for E-Commerce Laptop L
 - Compare **pricing patterns** across different seller tiers and identify opportunities for competitive pricing.
 
 ## Architecture
-### **1. Data Ingestion**
-- Extract **laptop listings data** from **eBay API**.
-- Store raw JSON data in **Google Cloud Storage (GCS)**.
+### **1. Data Ingestion (EL)**
+- **Extraction:** Python scripts (`src/scraper.py`) query the **eBay API** to retrieve laptop listings, flattening the JSON response into a raw CSV format to preserve data fidelity.
+- **Loading:** The raw data is uploaded to **Google Cloud Storage (GCS)** and immediately loaded into **Google BigQuery** as a raw staging table (`raw_ebay.laptop_listings`).
 
-### **2. Data Processing & Transformation**
-- Load data from GCS into **Google BigQuery**.
-- Transform and structure data using **dbt (Data Build Tool)**.
+### **2. Data Transformation (T)**
+- **dbt (Data Build Tool)** is used for the entire transformation layer inside BigQuery:
+    - **Staging Layer:** Cleans raw data, standardizes naming conventions, and extracts features (e.g., parsing RAM and Storage from titles using Regex).
+    - **Intermediate Layer:** Aggregates data to calculate complex metrics such as **Seller Tiers** and **Price Trends**.
+    - **Marts Layer:** Produces the final Star Schema (Fact/Dimensions) for reporting.
 
 ### **3. Business Intelligence (BI)**
-- Insights such as **listing counts by seller tier**, **average prices by seller tier and condition**, and **price tendencies (Spike, Stable, Drop)** are visualized for deeper analysis.
+- Insights such as **listing counts by seller tier**, **average prices by seller tier and condition**, and **price tendencies (Spike, Stable, Drop)** are visualized for deeper analysis in Looker Studio.
 
 ![architecture](https://github.com/user-attachments/assets/97f4f182-6190-4fa4-a417-1c697f8a47ad)
 
@@ -75,13 +77,22 @@ Data is collected from **eBay API**, specifically focusing on **laptop listings*
 ![dbdiagram](https://github.com/user-attachments/assets/cdd34865-1a80-4495-a71a-77b8a2be1b9f)
 
 ## Project Files
-1. `scraper.py` – Scrapes laptop listings from eBay.
-2. `load_to_gcs.py` – Uploads raw data to Google Cloud Storage.
-3. `bigquery_schema.sql` – Defines BigQuery table schema.
-4. `etl_pipeline.py` – Extracts data from Google Cloud Storage, transforms and loads it into BigQuery.
-5. `models/` – dbt SQL models for data transformations.
-6. `visualization_insights.md` – Document outlining the visualizations and insights for Looker Studio.
-7. `Dashboard_eBay_Laptop_Listings.pdf` – A static PDF export of the Looker Studio dashboard.
+## Project Structure
+```text
+├── data/                       # Sample raw data for testing
+├── dbt_project/                # dbt project directory (Transformation Logic)
+│   ├── dbt_project.yml         # dbt configuration
+│   ├── models/                 
+│   │   ├── staging/            # Cleaning and feature extraction
+│   │   ├── intermediate/       # Business logic and aggregations
+│   │   └── marts/              # Final Star Schema (Core & Analytics)
+├── src/                        # Python scripts (Ingestion Logic)
+│   ├── scraper.py              # Extracts data from eBay API to CSV
+│   ├── load_to_gcs.py          # Uploads raw files to GCS
+│   └── ingestion.py            # Loads data from GCS to BigQuery Raw
+├── visualization_dashboard/    # BI assets
+└── requirements.txt            # Python dependencies
+```
 
 ## Limitations
 
